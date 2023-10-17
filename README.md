@@ -1,5 +1,6 @@
 # Hotel_Pricing_Analytics
-Project Idea
+#Project Idea
+
 When planning a vacation, accommodation expenses can be a significant portion of your budget. Hotel prices can vary widely depending on factors like location, room type, and time of booking. Our project aims to automate the process of tracking hotel prices on Booking.com, one of the world's leading hotel booking platforms.
 
 How it works:
