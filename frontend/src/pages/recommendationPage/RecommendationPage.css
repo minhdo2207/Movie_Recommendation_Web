@@ -1,0 +1,91 @@
+/* RecommendationPage.css */
+
+.recommendation-page {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Align to the top */
+    padding: 20px;
+    background-color: #000; /* Black background color */
+    min-height: 100vh; /* Make sure the page takes at least the full viewport height */
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 20px;
+    background-color: #333; /* Dark background color for the header */
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 100px; /* Add some margin at the bottom */
+}
+
+input {
+    margin: 0;
+    padding: 10px;
+    width: 300px; /* Adjust the width as needed for a wider search bar */
+    border: 1px solid #ccc; /* Add a border for a cleaner look */
+    border-radius: 5px;
+}
+
+button {
+    cursor: pointer;
+    padding: 10px 20px;
+    background-color: #ffc107; /* Yellow color for the button */
+    color: #000; /* Text color */
+    border: none;
+    border-radius: 100px;
+    font-size: 16px;
+    margin-left: 10px;
+    margin-top: 10px;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+button:hover {
+    background-color: #ffca2a; /* Darker yellow color on hover */
+}
+
+h2 {
+    margin-top: 20px;
+    color: #fff; /* White text color */
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+li {
+    margin-bottom: 10px;
+    font-size: 18px;
+    color: #fff; /* White text color */
+}
+
+.movie-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Adjust the gap between movie containers */
+}
+
+.movie-container {
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    width: 250px; /* Adjust the width of each movie container as needed */
+}
+
+.movie-container img {
+    width: 100%;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.movie-details {
+    text-align: left;
+}
