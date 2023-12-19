@@ -13,7 +13,7 @@ def content_based_recommend_movies():
         movie_title = data.get('movie_title')
 
         # Get recommended movies as a list of titles
-        recommended_movies = contents_based_recommender(movie_title, num_of_recomm=5)
+        recommended_movies = contents_based_recommender(movie_title, num_of_recomm=10)
 
         return jsonify({'recommendations': recommended_movies})
 
