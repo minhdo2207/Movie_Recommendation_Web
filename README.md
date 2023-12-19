@@ -4,6 +4,8 @@
 
 The Movie Recommendation Web project aims to create a web application that provides personalized movie suggestions to users based on their watch history and personal traits. The recommendation system utilizes a switching hybrid approach, combining Model-based Collaborative Filtering (CF) and Content-Based Recommendation (CB) algorithms.
 
+![Movie Recommendation](https://github.com/minhdo2207/Movie_Recommendation_Web/blob/main/image/IntroPic.png)
+
 ## Input
 
 - **User Information (User Preference) for Newbie:** The system takes into account the preferences provided by new users.
