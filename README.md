@@ -34,7 +34,7 @@ Our recommendation system uses a switching hybrid approach, categorizing users i
 
 ## Approach and Tools Used
 
-  ![Movie Recommendation](https://github.com/minhdo2207/Movie_Recommendation_Web/blob/main/image/Plan.png)
+  ![Movie Recommendation](https://github.com/minhdo2207/Movie_Recommendation_Web/blob/main/image/Workflow.png)
 
 ## Dataset
 
