@@ -108,7 +108,6 @@ def item_based_recommender(uid='ur3032446'):
     movie_title_convert = pd.merge(movie_id_convert,movie_title)
 
     #get recommendation
-    print("List of recommendations for user {}".format(user_id))
     pred_rating.sort_values(inplace=True,ascending=False)
     pred_rating_df = pd.DataFrame(pred_rating).reset_index()
     pred_rating_df.columns = ['movie_id_number', 'predicted_rating']
