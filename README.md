@@ -19,6 +19,11 @@ The Movie Recommendation Web project aims to create a web application that provi
 
 ![Movie Recommendation](https://github.com/minhdo2207/Movie_Recommendation_Web/blob/main/image/Model%20Flow.png)
 
+
+- **Model-based Collaborative Filtering (CF):** Recommends movies based on the similarity between movies.
+- **K-means Clustering:** Groups similar users by features such as occupation, age, and gender to address the Cold Start problem.
+- **Content-Based Recommendation (CB):** Modified approach estimating similarity between one movie and a group of movies.
+
 Our recommendation system uses a switching hybrid approach, categorizing users into three cases:
 
 1. **Newbie:** For new users, K-means clustering is applied to group similar users based on features like occupation, age, and gender, solving the Cold Start problem.
@@ -28,10 +33,6 @@ Our recommendation system uses a switching hybrid approach, categorizing users i
 ![Movie Recommendation](https://github.com/minhdo2207/Movie_Recommendation_Web/blob/main/image/content-based_vs_collaborative_light.png)
 
 ## Approach and Tools Used
-
-- **Model-based Collaborative Filtering (CF):** Recommends movies based on the similarity between movies.
-- **K-means Clustering:** Groups similar users by features such as occupation, age, and gender to address the Cold Start problem.
-- **Content-Based Recommendation (CB):** Modified approach estimating similarity between one movie and a group of movies.
 
   ![Movie Recommendation](https://github.com/minhdo2207/Movie_Recommendation_Web/blob/main/image/Plan.png)
 
