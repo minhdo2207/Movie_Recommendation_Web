@@ -19,6 +19,20 @@ def content_based_recommend_movies():
 
     except Exception as e:
         return jsonify({'error': str(e)})
+    
+# @app.route('/api/collaborative-filtering-recommend', methods=['POST'])
+# def collaborative_filteringl_recommend_movies():
+#     try:
+#         data = request.get_json()
+#         movie_title = data.get('movie_title')
+
+#         # Get recommended movies as a list of titles
+#         recommended_movies = collaborative_filtering_recommender(movie_title, num_of_recomm=10)
+
+#         return jsonify({'recommendations': recommended_movies})
+
+#     except Exception as e:
+#         return jsonify({'error': str(e)})
 
 if __name__ == '__main__':
     app.run(port=5000)
