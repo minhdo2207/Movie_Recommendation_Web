@@ -86,6 +86,22 @@ li {
     margin-bottom: 10px;
 }
 
+
 .movie-details {
-    text-align: left;
+    flex-grow: 1; /* Allow movie-details to take up remaining vertical space */
+}
+
+.movie__imdbButton {
+    margin-top: 8px; /* Add a certain distance from the top */
+    padding: 8px 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto; /* Push the IMDb button to the bottom of the container */
+}
+
+.newTab {
+    margin-left: 4px;
+    font-size: 0.8em;
 }

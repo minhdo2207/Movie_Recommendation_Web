@@ -1,11 +1,9 @@
-// RecommendationPage.js
-
 import React, { useState } from 'react';
 import axios from 'axios';
 import './CollaborativeRecommendationPage.css';
 
 const CollaborativeRecommendationPage = () => {
-    const [movieTitle, setMovieTitle] = useState('');
+    const [userId, setUserId] = useState('');  // Added userId state
     const [recommendations, setRecommendations] = useState([]);
     const [loading, setLoading] = useState(false);
     const [error, setError] = useState('');
@@ -14,8 +12,14 @@ const CollaborativeRecommendationPage = () => {
         try {
             setLoading(true);
 
-            const response = await axios.post('http://localhost:5000/api/content-base-recommend', { movie_title: movieTitle });
+            const response = await axios.post('http://localhost:5000/api/collaborative-filtering-recommend', { userId });
             const movieTitles = response.data.recommendations;
+
+            if (movieTitles.length === 0) {
+                setError('No recommendations found for the given userId.');
+                setRecommendations([]);
+                return;
+            }
 
             const movieDetailsPromises = movieTitles.map(async (title) => {
                 const tmdbResponse = await axios.get(`https://api.themoviedb.org/3/search/movie`, {
@@ -36,8 +40,9 @@ const CollaborativeRecommendationPage = () => {
 
             const movieDetails = await Promise.all(movieDetailsPromises);
             setRecommendations(movieDetails);
+            setError('');
         } catch (error) {
-            setError('Error fetching recommendations');
+            setError('Error fetching recommendations. Please try again later.');
             console.error('Error fetching recommendations:', error);
         } finally {
             setLoading(false);
@@ -47,7 +52,7 @@ const CollaborativeRecommendationPage = () => {
     return (
         <div className="recommendation-page">
             <div className="search-bar">
-                <input type="text" value={movieTitle} onChange={(e) => setMovieTitle(e.target.value)} placeholder="Enter your userId" />
+                <input type="text" value={userId} onChange={(e) => setUserId(e.target.value)} placeholder="Enter your userId" />
                 <button onClick={handleRecommendation} disabled={loading}>
                     {loading ? 'Loading...' : 'Get Recommendations'}
                 </button>
@@ -65,6 +70,11 @@ const CollaborativeRecommendationPage = () => {
                                 <h3>{movie ? movie.original_title : ''}</h3>
                                 <p>Release Date: {movie ? movie.releaseDate : ''}</p>
                                 <p>{movie ? movie.overview.slice(0, 118) + "..." : ""}</p>
+                                <a href={`https://www.imdb.com/search/title/?title=${encodeURIComponent(movie ? movie.original_title : '')}`} target="_blank" style={{ textDecoration: "none" }}>
+                                    <span className="movie__imdbButton movie__Button">
+                                        IMDb <i className="newTab fas fa-external-link-alt"></i>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     ))}

@@ -30,7 +30,8 @@ const ContentRecommendationPage = () => {
                     original_title: movieDetails.original_title,
                     releaseDate: movieDetails.release_date,
                     overview: movieDetails.overview,
-                    posterPath: movieDetails.poster_path
+                    posterPath: movieDetails.poster_path,
+                    id:movieDetails.id
                 };
             });
 
@@ -65,6 +66,14 @@ const ContentRecommendationPage = () => {
                                 <h3>{movie ? movie.original_title : ''}</h3>
                                 <p>Release Date: {movie ? movie.releaseDate : ''}</p>
                                 <p>{movie ? movie.overview.slice(0, 118) + "..." : ""}</p>
+                                <br></br>
+                                <p>
+                                    <a href={`https://www.imdb.com/search/title/?title=${encodeURIComponent(movie ? movie.original_title : '')}`} target="_blank" style={{ textDecoration: "none" }}>
+                                        <span className="movie__imdbButton movie__Button">
+                                            IMDb <i className="newTab fas fa-external-link-alt"></i>
+                                        </span>
+                                    </a>
+                                </p>
                             </div>
                         </div>
                     ))}
