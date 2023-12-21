@@ -74,6 +74,9 @@ li {
 }
 
 .movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 8px;

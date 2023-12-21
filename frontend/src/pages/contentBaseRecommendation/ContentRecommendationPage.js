@@ -31,7 +31,7 @@ const ContentRecommendationPage = () => {
                     releaseDate: movieDetails.release_date,
                     overview: movieDetails.overview,
                     posterPath: movieDetails.poster_path,
-                    id:movieDetails.id
+                    id: movieDetails.id
                 };
             });
 
@@ -61,19 +61,21 @@ const ContentRecommendationPage = () => {
                 <div className="movie-list">
                     {recommendations.map((movie, index) => (
                         <div key={index} className="movie-container">
+                            <div></div>
                             <img src={`https://image.tmdb.org/t/p/original${movie ? movie.posterPath : ''}`} alt={movie ? movie.original_title : ''} />
                             <div className="movie-details">
                                 <h3>{movie ? movie.original_title : ''}</h3>
                                 <p>Release Date: {movie ? movie.releaseDate : ''}</p>
                                 <p>{movie ? movie.overview.slice(0, 118) + "..." : ""}</p>
                                 <br></br>
-                                <p>
-                                    <a href={`https://www.imdb.com/search/title/?title=${encodeURIComponent(movie ? movie.original_title : '')}`} target="_blank" style={{ textDecoration: "none" }}>
-                                        <span className="movie__imdbButton movie__Button">
-                                            IMDb <i className="newTab fas fa-external-link-alt"></i>
-                                        </span>
-                                    </a>
-                                </p>
+
+                            </div>
+                            <div>
+                                <a href={`https://www.imdb.com/search/title/?title=${encodeURIComponent(movie ? movie.original_title : '')}`} target="_blank" style={{ textDecoration: "none" }}>
+                                    <span className="movie__imdbButton movie__Button">
+                                        IMDb <i className="newTab fas fa-external-link-alt"></i>
+                                    </span>
+                                </a>
                             </div>
                         </div>
                     ))}

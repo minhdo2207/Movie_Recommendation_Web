@@ -74,12 +74,14 @@ li {
 }
 
 .movie-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     border: 1px solid #ccc;
     padding: 10px;
     border-radius: 8px;
     width: 250px; /* Adjust the width of each movie container as needed */
 }
-
 .movie-container img {
     width: 100%;
     border-radius: 8px;
