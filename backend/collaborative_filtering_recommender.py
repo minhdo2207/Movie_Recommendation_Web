@@ -8,8 +8,8 @@ import urllib.request
 from scipy import sparse
 
 #Load dataset
-movies_df = pd.read_csv("../preprocessor/movies_data_cleaned.csv", sep=',', index_col=False, dtype='unicode', usecols=['movie_id', 'title', 'img_url'])
-df = pd.read_csv("../preprocessor/user_rating_cleaned.csv", sep=',', index_col=False, dtype='unicode')
+movies_df = pd.read_csv("./data/movies_data_cleaned.csv", sep=',', index_col=False, dtype='unicode', usecols=['movie_id', 'title', 'img_url'])
+df = pd.read_csv("./data/user_rating_cleaned.csv", sep=',', index_col=False, dtype='unicode')
 
 #Functions to return dataset's features
 def get_movie_url(movie_id):

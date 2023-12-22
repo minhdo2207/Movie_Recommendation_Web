@@ -1,0 +1,17 @@
+Flask==2.2.2
+numpy
+scikit-learn
+fuzzywuzzy
+Pillow
+matplotlib
+flask_cors
+pandas
+python-Levenshtein
+gevent 
+click
+colorama
+itsdangerous
+Jinja2
+MarkupSafe
+gunicorn
+Werkzeug==2.2.2
