@@ -42,24 +42,39 @@ The dataset used in this project is sourced from IMDB.
 https://www.imdb.com/
 
 ## How to Use
-
-1. Run the web app
-### Using Docker:
+### ****Using Docker:*
 ### Pull and run the backend container:
 
-   ```bash
-   docker pull minhdo2207/movie_recommention_backend
-   docker run minhdo2207/movie_recommention_backend
+```bash
+docker pull minhdo2207/movie_recommention_backend
+docker run minhdo2207/movie_recommention_backend
+```
+
 ### Pull and run the frontend container:
-   ```bash
-   docker pull minhdo2207/movie_recommention_frontend
-   docker run minhdo2207/movie_recommention_frontend
+```bash
+docker pull minhdo2207/movie_recommention_frontend
+docker run minhdo2207/movie_recommention_frontend
+```
 
+### ****Using Github:*
+### In branch `main` 
+### Backend:
+```bash
+cd backend
+python -m venv venv
+.\venv\Scripts\Activate.ps1  # For Windows
+source venv/bin/activate  # For Unix/Mac
+pip install --upgrade pip
+pip install flask,pandas, numpy,scikit-learn,fuzzywuzzy,Pillow,matplotlib,flask_cors
+python -m app
+```
 
-
-
-3. Input user preferences or existing user ID.
-4. Receive personalized movie recommendations.
+### Frontend:
+```bash
+cd frontend
+npm install
+npm start
+```
 
 ## Contributing
 
