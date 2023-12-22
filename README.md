@@ -43,8 +43,21 @@ https://www.imdb.com/
 
 ## How to Use
 
-1. Install the necessary dependencies.
-2. Run the web application.
+1. Run the web app
+### Using Docker:
+### Pull and run the backend container:
+
+   ```bash
+   docker pull minhdo2207/movie_recommention_backend
+   docker run minhdo2207/movie_recommention_backend
+### Pull and run the frontend container:
+   ```bash
+   docker pull minhdo2207/movie_recommention_frontend
+   docker run minhdo2207/movie_recommention_frontend
+
+
+
+
 3. Input user preferences or existing user ID.
 4. Receive personalized movie recommendations.
 
