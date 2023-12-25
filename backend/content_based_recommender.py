@@ -10,8 +10,8 @@ matplotlib.use('Agg')  # Set Matplotlib to use the Agg backend
 import matplotlib.pyplot as plt
 
 # Load data
-movies = pd.read_csv('../preprocessor/movies_data_cleaned.csv', sep=',', index_col=False, dtype='unicode')
-selected_movies = movies.head(20000)
+movies = pd.read_csv('../preprocessor/movies_small.csv', sep=',', index_col=False, dtype='unicode')
+selected_movies = movies
 
 # Explore the Feature (genres)
 selected_movies[['title', 'genres', 'overview']].head(5)
