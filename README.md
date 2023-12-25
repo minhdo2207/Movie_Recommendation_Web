@@ -47,13 +47,13 @@ https://www.imdb.com/
 
 ```bash
 docker pull minhdo2207/movie_recommention_backend
-docker run minhdo2207/movie_recommention_backend
+docker run -d -p 5000:5000 --name be minhdo2207/movie_recommention_backend
 ```
 
 ### Pull and run the frontend container:
 ```bash
 docker pull minhdo2207/movie_recommention_frontend
-docker run minhdo2207/movie_recommention_frontend
+docker run -d -p 3000:3000 --name fe  minhdo2207/movie_recommention_frontend
 ```
 
 ### ****Using Github:*
