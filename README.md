@@ -17,9 +17,6 @@ The Movie Recommendation Web project aims to create a web application that provi
 
 ## Algorithms
 
-![Movie Recommendation](https://github.com/minhdo2207/Movie_Recommendation_Web/blob/main/image/Model%20Flow.png)
-
-
 - **Item-based Collaborative Filtering (CF):** Recommends movies based on the similarity between movies.
 - **Content-Based Recommendation (CB):** Modified approach estimating similarity between one movie and a group of movies.
 
